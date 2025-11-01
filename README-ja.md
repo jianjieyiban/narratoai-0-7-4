@@ -1,84 +1,146 @@
+# NarratoAI
+
+> AIを活用した自動ビデオナレーション・編集ツール
+
 <div align="center">
-<h1 align="center" style="font-size: 2cm;"> NarratoAI 😎📽️ </h1>
-<h3 align="center">一体型AI映画解説および自動ビデオ編集ツール🎬🎞️ </h3>
 
-<h3>📖 <a href="README-cn.md">简体中文</a> | <a href="README.md">English</a> | 日本語 </h3>
-<div align="center">
+![Version](https://img.shields.io/badge/version-0.7.4-blue.svg)
+![Python](https://img.shields.io/badge/python-3.12+-green.svg)
+![License](https://img.shields.io/badge/license-Modified%20MIT-lightgrey.svg)
 
-[//]: # (  <a href="https://trendshift.io/repositories/8731" target="_blank"><img src="https://trendshift.io/api/badge/repositories/8731" alt="harry0703%2FNarratoAI | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>)
-</div>
-<br>
-NarratoAIは、LLMを活用してスクリプト作成、自動ビデオ編集、ナレーション、字幕生成の一体型ソリューションを提供する自動化ビデオナレーションツールです。
-<br>
+**自動化AIビデオナレーションツール**  
+ビデオ分析 → スクリプト生成 → スマート編集 → 音声・字幕 → 最終出力
 
-[![madewithlove](https://img.shields.io/badge/made_with-%E2%9D%A4-red?style=for-the-badge&labelColor=orange)](https://github.com/linyqh/NarratoAI)
-[![GitHub license](https://img.shields.io/github/license/linyqh/NarratoAI?style=for-the-badge)](https://github.com/linyqh/NarratoAI/blob/main/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/linyqh/NarratoAI?style=for-the-badge)](https://github.com/linyqh/NarratoAI/issues)
-[![GitHub stars](https://img.shields.io/github/stars/linyqh/NarratoAI?style=for-the-badge)](https://github.com/linyqh/NarratoAI/stargazers)
-
-<a href="https://discord.gg/uVAJftcm" target="_blank">💬 Discordオープンソースコミュニティに参加して、プロジェクトの最新情報を入手しましょう。</a>
-
-<h2><a href="https://p9mf6rjv3c.feishu.cn/wiki/SP8swLLZki5WRWkhuFvc2CyInDg?from=from_copylink" target="_blank">🎉🎉🎉 公式ドキュメント 🎉🎉🎉</a> </h2>
-<h3>ホーム</h3>
-
-![](docs/index-zh.png)
-
-<h3>ビデオレビューインターフェース</h3>
-
-![](docs/check-zh.png)
+[English](README-en.md) | [简体中文](README.md) | [日本語](README-ja.md)
 
 </div>
 
-## 最新情報
-- 2024.11.24 Discordコミュニティ開設：https://discord.gg/uVAJftcm
-- 2024.11.11 オープンソースコミュニティに移行、参加を歓迎します！ [公式コミュニティに参加](https://github.com/linyqh/NarratoAI/wiki)
-- 2024.11.10 公式ドキュメント公開、詳細は [公式ドキュメント](https://p9mf6rjv3c.feishu.cn/wiki/SP8swLLZki5WRWkhuFvc2CyInDg) を参照
-- 2024.11.10 新バージョンv0.3.5リリース；ビデオ編集プロセスの最適化
+---
 
-## 今後の計画 🥳
-- [x] Windows統合パックリリース
-- [x] ストーリー生成プロセスの最適化、生成効果の向上
-- [x] バージョン0.3.5統合パックリリース
-- [x] アリババQwen2-VL大規模モデルのビデオ理解サポート
-- [x] 短編ドラマの解説サポート
-  - [x] 一クリックで素材を統合
-  - [x] 一クリックで文字起こし
-  - [x] 一クリックでキャッシュをクリア
-- [ ] ジャン映草稿のエクスポートをサポート
-- [ ] 主役の顔のマッチング
-- [ ] 音声、スクリプト、ビデオ素材に基づいて自動マッチングをサポート
-- [ ] より多くのTTSエンジンをサポート
-- [ ] ...
+## 📋 概要
 
-## システム要件 📦
+NarratoAIは大規模言語モデル（LLM）を活用した自動ビデオナレーションツールです。ナレーション付きビデオを作成するためのエンドツーエンドソリューションを提供します：
 
-- 推奨最低：CPU 4コア以上、メモリ8GB以上、GPUは必須ではありません
-- Windows 10またはMacOS 11.0以上
+1. **インテリジェントなビデオ分析**: ビジョンモデルを使用してビデオフレームを分析し、コンテンツを理解
+2. **プロフェッショナルなスクリプト生成**: ビデオコンテンツに基づいてナレーションスクリプトを自動生成
+3. **スマートなビデオ編集**: スクリプトに従ってビデオセグメントを自動クリップ
+4. **マルチエンジンTTS**: Edge TTS、Azure、Tencent Cloudなどをサポート
+5. **自動字幕生成**: SRT形式の字幕ファイルを生成
+6. **ワンクリック出力**: ビデオ、オーディオ、BGM、字幕を最終出力にマージ
 
-## フィードバックと提案 📢
+---
 
-👏 1. [issue](https://github.com/linyqh/NarratoAI/issues)または[pull request](https://github.com/linyqh/NarratoAI/pulls)を提出できます
+## ✨ 機能
 
-💬 2. [オープンソースコミュニティ交流グループに参加](https://github.com/linyqh/NarratoAI/wiki)
+- **複数のビデオタイプ**: 映画解説、ショートドラマ、動物世界、料理、ドキュメンタリーなど
+- **ビジョンモデル統合**: Gemini、OpenAI、Qwen VLなどのビジョンモデルをサポート
+- **テキストモデル統合**: DeepSeek、GPT、Gemini、Qwenなどのテキストモデルをサポート
+- **複数のTTSエンジン**: Edge TTS（無料）、Azure、Tencent Cloud、Qwen TTS、SoulVoice
+- **Web UI**: 使いやすいStreamlitベースのインターフェース
+- **Dockerサポート**: すぐに使えるDockerデプロイメント
 
-📷 3. 公式アカウント【NarratoAI助手】をフォローして最新情報を入手
+---
 
-## 参考プロジェクト 📚
-- https://github.com/FujiwaraChoki/MoneyPrinter
-- https://github.com/harry0703/MoneyPrinterTurbo
+## 🚀 クイックスタート
 
-このプロジェクトは上記のプロジェクトを基にリファクタリングされ、映画解説機能が追加されました。オリジナルの作者に感謝します 🥳🥳🥳 
+### 前提条件
 
-## 作者にコーヒーを一杯おごる ☕️
-<div style="display: flex; justify-content: space-between;">
-  <img src="https://github.com/user-attachments/assets/5038ccfb-addf-4db1-9966-99415989fd0c" alt="Image 1" style="width: 350px; height: 350px; margin: auto;"/>
-  <img src="https://github.com/user-attachments/assets/07d4fd58-02f0-425c-8b59-2ab94b4f09f8" alt="Image 2" style="width: 350px; height: 350px; margin: auto;"/>
-</div>
+- Python 3.12+
+- FFmpeg
+- LLMサービスのAPIキー（ビジョンとテキストモデル）
 
-## ライセンス 📝
+### インストール
 
-[`LICENSE`](LICENSE) ファイルをクリックして表示
+```bash
+# リポジトリをクローン
+git clone https://github.com/jianjieyiban/narratoai-0-7-4.git
+cd narratoai-0-7-4
 
-## Star History
+# 仮想環境を作成
+python -m venv venv
+source venv/bin/activate  # Windowsの場合: venv\Scripts\activate
 
-[![Star History Chart](https://api.star-history.com/svg?repos=linyqh/NarratoAI&type=Date)](https://star-history.com/#linyqh/NarratoAI&Date)
+# 依存関係をインストール
+pip install -r requirements.txt
+
+# 設定ファイルをコピーして設定
+cp config.example.toml config.toml
+# config.tomlにAPIキーを設定
+
+# アプリケーションを起動
+streamlit run webui.py --server.maxUploadSize=2048
+```
+
+ブラウザで `http://localhost:8501` にアクセスしてください。
+
+### Dockerデプロイメント
+
+```bash
+docker-compose up -d
+```
+
+---
+
+## ⚙️ 設定
+
+`config.toml`を編集して設定：
+
+- **ビジョンモデル**: ビデオフレーム分析用
+  - 例: `gemini/gemini-2.0-flash-lite`
+- **テキストモデル**: スクリプト生成用
+  - 例: `deepseek/deepseek-chat`
+- **TTSエンジン**: 音声合成用
+  - オプション: `edge_tts`, `azure_speech`, `tencent_tts`など
+
+詳細なドキュメントについては、[`README.md`](README.md)（中国語）を参照してください。
+
+---
+
+## 📖 ドキュメント
+
+詳細なドキュメントについては、以下を参照してください：
+- [README.md](README.md) - 完全なドキュメント（中国語）
+- [設定ガイド](配置说明.md) - 設定ガイド
+
+---
+
+## 🤖 サポートされているモデル
+
+### ビジョンモデル
+- Gemini: `gemini-2.0-flash-lite`, `gemini-1.5-pro`
+- OpenAI: `gpt-4o`, `gpt-4o-mini`
+- Qwen: `qwen2.5-vl-32b-instruct`
+
+### テキストモデル
+- DeepSeek: `deepseek-chat`, `deepseek-reasoner`
+- OpenAI: `gpt-4o`, `gpt-4o-mini`
+- Gemini: `gemini-2.0-flash`
+- Qwen: `qwen-plus`, `qwen-turbo`
+
+### TTSエンジン
+- Edge TTS（無料）
+- Azure Speech
+- Tencent Cloud TTS
+- Qwen TTS
+- SoulVoice
+
+---
+
+## 📝 ライセンス
+
+修正MITライセンス - 学習と研究目的のみ、商用利用不可。
+
+詳細は[`LICENSE`](LICENSE)ファイルを参照してください。
+
+---
+
+## 🔗 リンク
+
+- **リポジトリ**: https://github.com/jianjieyiban/narratoai-0-7-4
+- **Issues**: https://github.com/jianjieyiban/narratoai-0-7-4/issues
+- **Pull Requests**: https://github.com/jianjieyiban/narratoai-0-7-4/pulls
+
+---
+
+**バージョン**: 0.7.4  
+**最終更新**: 2025-11-01
